@@ -19,6 +19,12 @@
     
   
 <% else %>
+<% @micropost.each do |post| %>
+  <ul>
+    <li><%= post.content %></li>
+  </ul>
+  <% end %>
+
   <div class="center hero-unit">
     <h1>Welcome to DansBuzz</h1>
 
@@ -29,6 +35,8 @@
 
     <%= link_to "Sign up now!", signup_path,
                                 class: "btn btn-large btn-primary" %>
+                              
+
   </div>
 
   <%= link_to image_tag("logo.png", alt: "DansBuzz"), 'root_path' %>
