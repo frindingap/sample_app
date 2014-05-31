@@ -19,12 +19,23 @@
     
   
 <% else %>
-<% @micropost.each do |post| %>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>Place holder</h3>
+</div>
+<div class="span4">
+  <h3>Blog Posts</h3>
+  <% @micropost.each do |post| %>
   <ul>
     <li><%= post.content %></li>
   </ul>
   <% end %>
+</div>
+<div class="span4">
+  <h3>Right Panel</h3>
+</div>
 
+<%#=
   <div class="center hero-unit">
     <h1>Welcome to DansBuzz</h1>
 
