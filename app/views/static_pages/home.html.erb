@@ -19,36 +19,39 @@
     
   
 <% else %>
-<div class="row-fluid">
-  <div class="span4">
-    <h3>Place holder</h3>
-</div>
-<div class="span4">
-  <h3>Blog Posts</h3>
-  <% @micropost.each do |post| %>
-  <ul>
-    <li><%= post.content %></li>
-  </ul>
-  <% end %>
-</div>
-<div class="span4">
-  <h3>Right Panel</h3>
-</div>
-
-<%#=
-  <div class="center hero-unit">
-    <h1>Welcome to DansBuzz</h1>
-
-    <h2>
-      DansBuzz / Beta
-      <a href="#">Blog-Promote-Share</a>
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path,
-                                class: "btn btn-large btn-primary" %>
-                              
-
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4">
+      <h3>Place holder</h3>
   </div>
+  <div class="span4">
+    <h3>Blog Posts</h3>
+    <% @micropost.each do |post| %>
+    <ul class="list-group">
+      <li class="list-group-item"><%= post.content %></li>
+    </ul>
+    <% end %>
+  </div>
+  <div class="span4">
+    <h3>Right Panel</h3>
+    <%= @blog_feed %>
+  </div>
+
+  <%#=
+    <div class="center hero-unit">
+      <h1>Welcome to DansBuzz</h1>
+
+      <h2>
+        DansBuzz / Beta
+        <a href="#">Blog-Promote-Share</a>
+      </h2>
+
+      <%= link_to "Sign up now!", signup_path,
+                                  class: "btn btn-large btn-primary" %>
+                                
+
+    </div>
+</div>
 
   <%= link_to image_tag("logo.png", alt: "DansBuzz"), 'root_path' %>
 <% end %>
