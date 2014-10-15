@@ -1,13 +1,26 @@
-<ul>
-	<% @data.each do |i| %>
-	<li>
-	<a href =
-		<%= i.text %>
-		>
-		<%= "Click here(linnks are working,now I have to pull out the text" %>
-	</li>
-	</a>
-</ul>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			<ul>
+				<% @data.each do |i| %>
+				<li>
+				<a href =
+					<%= i.text %>
+					>
+					<%= "Click here" %>
+				</li>
+				</a>
+			</ul>
+			<% end %>
+		</div>
+			<div class="span10">
+				<ul>
+				<% @title.each do |i| %>
+				<li>
+					<%= i %>
+				</li>
+			</ul>
+			<% end %>
+			</div>
+		</div>
 
-
-<% end %>
