@@ -3,11 +3,11 @@ class FeedsController < ApplicationController
   	require 'nokogiri'
     require 'open-uri'
     require 'rubygems'
-    url = 'http://www.huffingtonpost.com/news/ballet/'
-    doc = Nokogiri::HTML(open(url))
-    @data = doc.css(".seo_bnp")
+    url = "http://www.huffingtonpost.com/tag/ballet/feed.xml"
+    doc = Nokogiri::XML(open(url))
+    @data = doc.xpath("//xmlns:link/@href")
     #@data = data_a.find('title')
     #@data = data_a.['a']
-    @links = "hello"
+    #@links = "hello"
   end
 end
